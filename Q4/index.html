@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Company and Products Client</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-2.2.3.min.js"></script>
+    <script src="mustache.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <script id="company-summary" type="x-tmpl-mustache">
+      <div id="company-{{id}}">
+        <h2>{{name}}</h2>
+        <h3>Product(s):</h3>
+        <p>
+        {{#products}}
+        {{name}},
+        {{/products}}
+        </p>
+        <hr>
+      </div>
+    </script>
+
+    <div id="companies"></div>
+
+  </body>
+</html>
